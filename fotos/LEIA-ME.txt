@@ -1,0 +1,19 @@
+COMO ADICIONAR SUAS FOTOS E VÍDEO
+==================================
+
+Coloque os arquivos reais do processo (planejamento, montagem, testes)
+dentro desta pasta "fotos" usando exatamente estes nomes:
+
+  processo-1.jpg
+  processo-2.jpg
+  processo-3.jpg
+  processo-4.jpg
+  processo-5.jpg
+  processo-6.jpg
+  video-processo.mp4   (opcional)
+
+Assim que um arquivo com o nome certo estiver aqui, ele aparece
+automaticamente no site, no lugar do quadro tracejado de "foto em breve".
+Não precisa mexer no código — só substituir os arquivos.
+
+Dica: fotos na horizontal (paisagem) e com boa luz ficam melhores na grade.
