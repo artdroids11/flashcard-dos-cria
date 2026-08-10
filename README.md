@@ -12,42 +12,6 @@ Este material explora:
 - **Flashcards interativos** — teste seu conhecimento
 - **Galeria de fotos** — register do protótipo desenvolvido
 
-## 📂 Estrutura do Projeto
-
-```
-flashcard-dos-cria/
-├── index.html          # Página principal
-├── style.css           # Estilos (formatado e organizado)
-├── script.js           # Interatividade (simulador, lightbox, flashcards)
-├── fotos/              # 📸 Pasta com suas imagens e vídeos
-│   ├── processo-1.jpg
-│   ├── processo-2.jpg
-│   ├── processo-3.jpg
-│   ├── processo-4.jpg
-│   ├── processo-5.jpg
-│   ├── processo-6.jpg
-│   └── video-processo.mp4 (opcional)
-├── README.md           # Este arquivo
-└── ADICIONAR_FOTOS.md  # Guia detalhado para adicionar mídia
-```
-
-## 🚀 Como Usar
-
-### 1. Clonar ou baixar o projeto
-```bash
-git clone <url-do-repositorio>
-cd flashcard-dos-cria
-```
-
-### 2. Abrir no navegador
-Simplesmente abra `index.html` em qualquer navegador moderno:
-- Duplo clique no arquivo, ou
-- Arraste para o navegador, ou
-- Use um servidor local (recomendado para testes)
-
-### 3. Adicionar suas fotos e vídeos
-Veja o arquivo **[ADICIONAR_FOTOS.md](ADICIONAR_FOTOS.md)** para instruções completas.
-
 ## ✨ Funcionalidades
 
 ### 📱 Navegação
