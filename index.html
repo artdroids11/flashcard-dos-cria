@@ -1,101 +1,321 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projeto educativo sobre astigmatismo, ciência e robótica.">
-  <title>Astigmatismo — Ciência e Robótica</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style-extras.css">
-</head>
-<body>
-  <nav><a class="brand" href="#inicio"><span>◉</span> ASTIGMATISMO</a><div><a href="#entenda">Entenda</a><a href="#robotica">Robótica</a><a href="#projeto">Projeto</a><a href="#cards">Flashcards</a></div></nav>
-  <main>
-    <header id="inicio" class="hero section">
-      <div class="eyebrow">CIÊNCIA • VISÃO • TECNOLOGIA</div>
-      <h1>ASTIGMA<span>TISMO</span></h1>
-      <blockquote>“Quando a luz não encontra um único ponto para formar uma imagem nítida.”</blockquote>
-      <p>Entenda o problema com esquemas simples e descubra como ciência, programação e robótica podem ajudar.</p>
-      <a class="cta" href="#entenda">Explorar o projeto ↓</a>
-      <div class="eye" role="img" aria-label="Esquema do trajeto da luz no olho"><div class="rays"><i></i><i></i><i></i></div><div class="lens"></div><div class="focus"></div><div class="retina"></div><span class="eyeLabel l1">LUZ</span><span class="eyeLabel l2">CÓRNEA</span><span class="eyeLabel l3">CRISTALINO</span><span class="eyeLabel l4">RETINA</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Experiência escolar interativa sobre miopia, óptica, programação e robótica."
+    />
+    <title>Miopia — o foco do futuro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span>MIOPIA</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">
+        Menu
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Navegação principal">
+        <a class="nav-featured" href="#flashcards">Flashcards</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#solucao">Solução</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+
+      <div class="access" aria-label="Controles de acessibilidade">
+        <button id="fontDown" type="button" aria-label="Diminuir fonte">A−</button>
+        <button id="fontUp" type="button" aria-label="Aumentar fonte">A+</button>
+        <button id="contrast" type="button" aria-label="Alternar alto contraste">◐</button>
+      </div>
     </header>
 
-    <section id="entenda" class="section">
-      <div class="sectionHead"><b>01</b><div><span>COMECE POR AQUI</span><h2>O que é?</h2></div></div>
-      <div class="twoCol"><div class="copy"><p class="lead">Astigmatismo é um <strong>erro refrativo</strong>: a curvatura da córnea ou do cristalino não é regular em todas as direções.</p><p>Por isso, a luz não converge em um único ponto na retina. Ele pode aparecer sozinho ou junto com miopia e hipermetropia.</p><div class="path"><span>LUZ</span>→<span>CÓRNEA</span>→<span>CRISTALINO</span>→<span>RETINA</span>→<span>IMAGEM</span></div></div>
-      <div class="compare"><div><b>SEM ASTIGMATISMO</b><div class="beam normal">━━━━━━●</div><small>um ponto de foco</small></div><div><b>COM ASTIGMATISMO</b><div class="beam altered">╲━━━●<br>╱━━━━●</div><small>mais de uma região de foco</small></div></div></div>
-    </section>
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
 
-    <section class="dark section vision"><div class="sectionHead"><b>02</b><div><span>SIMULAÇÃO EDUCATIVA</span><h2>Como o mundo pode parecer?</h2></div></div>
-      <div class="simGrid"><div class="sample"><div id="sampleText" class="sampleText">VISÃO<br>EM FOCO</div><div class="street"><i></i><i></i><i></i><i></i></div></div><div class="controls"><label for="dist">INTENSIDADE DA DISTORÇÃO <strong id="distValue">42%</strong></label><input id="dist" type="range" min="0" max="100" value="42"><div class="scale"><span>0% · sem distorção</span><span>100% · forte</span></div><p>Este controle cria uma representação educativa. Cada pessoa percebe o astigmatismo de forma diferente.</p></div></div>
-    </section>
+        <div class="hero-copy">
+          <p class="eyebrow reveal-item">CIÊNCIA + PROGRAMAÇÃO + ROBÓTICA</p>
+          <h1 aria-label="Miopia: o foco do futuro">
+            <span class="word-main">MIOPIA</span>
+            <span class="word-sub">o foco do futuro.</span>
+          </h1>
+          <p class="hero-text reveal-item">
+            Quando a luz converge antes da retina, o que está longe perde nitidez.
+          </p>
+          <a class="primary-button reveal-item" href="#flashcards">
+            Começar pelos cards <span aria-hidden="true">↓</span>
+          </a>
+        </div>
 
-    <section id="robotica" class="section"><div class="sectionHead"><b>03</b><div><span>PRECISÃO EM MOVIMENTO</span><h2>Astigmatismo e Robótica</h2></div></div><p class="wideLead">A robótica pode reduzir impactos em tarefas que exigem precisão e repetibilidade — do diagnóstico à fabricação personalizada de lentes.</p>
-      <div class="techGrid"><article><i>⌁</i><h3>DIAGNÓSTICO</h3><p>Sistemas automatizados e exames padronizados.</p></article><article><i>⌖</i><h3>POSICIONAMENTO</h3><p>Ajuste preciso de equipamentos em procedimentos.</p></article><article><i>◫</i><h3>FABRICAÇÃO</h3><p>Lentes produzidas com medições de alta precisão.</p></article><article><i>◉</i><h3>TECNOLOGIA ASSISTIVA</h3><p>Apoio a pessoas com visão reduzida.</p></article></div>
-      <div class="nowFuture"><div><b>JÁ EXISTE</b><p>Topógrafos de córnea, equipamentos digitais de medição e sistemas eletrônicos de diagnóstico.</p></div><div><b>EM DESENVOLVIMENTO</b><p>Posicionamento automatizado, medições integradas e fabricação controlada de lentes.</p></div><div><b>NO FUTURO</b><p>Robôs com visão computacional e produção ainda mais personalizada.</p></div></div>
-    </section>
+        <div class="optic-stage" aria-label="Animação da luz entrando em um olho com miopia">
+          <div class="distant-object" aria-hidden="true">
+            <span></span><i></i><b></b>
+          </div>
+          <div class="light-path" aria-hidden="true">
+            <i class="light light-top"></i>
+            <i class="light light-bottom"></i>
+          </div>
+          <div class="eye-shell" aria-hidden="true">
+            <span class="eye-cornea"></span>
+            <span class="eye-lens"></span>
+            <span class="eye-retina"></span>
+            <span class="eye-focus"></span>
+            <i class="inside-ray top"></i>
+            <i class="inside-ray bottom"></i>
+          </div>
+          <p><span></span> foco antes da retina</p>
+        </div>
 
-    <section class="timeline section"><div class="sectionHead"><b>04</b><div><span>EVOLUÇÃO</span><h2>Linha do tempo</h2></div></div><div class="timeLine"><div><i>1</i><b>PASSADO</b><span>Medição manual</span></div><div><i>2</i><b>PRESENTE</b><span>Equipamentos digitais</span></div><div><i>3</i><b>PRÓXIMOS ANOS</b><span>Automação assistida</span></div><div><i>4</i><b>FUTURO</b><span>Robótica e IA</span></div></div></section>
+        <div class="scroll-note" aria-hidden="true"><span></span> role para explorar</div>
+      </section>
 
-    <section id="projeto" class="dark section"><div class="sectionHead"><b>05</b><div><span>BASTIDORES</span><h2>Do projeto à prototipagem</h2></div></div><div class="projectIntro"><p>O projeto une o estudo do astigmatismo à prática da robótica. Registramos pesquisa, planejamento, desenvolvimento, montagem e testes de um protótipo para representar a distorção da luz.</p><div class="steps">PESQUISA <span>→</span> ESBOÇO <span>→</span> MONTAGEM <span>→</span> TESTES</div></div>
-      <div class="gallery">
-        <figure class="gallery-item">
-          <img src="fotos/elo.webp" alt="Detalhe do componente em montagem" loading="lazy">
-          <figcaption>Imagem 01 — Detalhe do componente em montagem.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="fotos/elo2.webp" alt="Estrutura em fase de testes" loading="lazy">
-          <figcaption>Imagem 02 — Estrutura em fase de testes.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="fotos/elo.webp" alt="Ajustes de peças e sensores" loading="lazy">
-          <figcaption>Imagem 03 — Ajustes de peças e sensores.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="fotos/elo2.webp" alt="Verificação do alinhamento óptico" loading="lazy">
-          <figcaption>Imagem 04 — Verificação do alinhamento óptico.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="fotos/elo.webp" alt="Equipe revisando o resultado" loading="lazy">
-          <figcaption>Imagem 05 — Equipe revisando o resultado.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="fotos/elo2.webp" alt="Preparação para testes finais" loading="lazy">
-          <figcaption>Imagem 06 — Preparação para testes finais.</figcaption>
-        </figure>
-      </div>
-      <div class="videos">
-        <figure class="video-item video-block">
-          <video controls preload="metadata">
-            <source src="fotos/sim1.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo HTML5.
-          </video>
-          <figcaption>Vídeo 01 — Registro da montagem do protótipo.</figcaption>
-        </figure>
-        <figure class="video-item video-block">
-          <video controls preload="metadata">
-            <source src="fotos/sim2.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo HTML5.
-          </video>
-          <figcaption>Vídeo 02 — Testes e validação do protótipo.</figcaption>
-        </figure>
-      </div>
-    </section>
+      <section class="cards-lab" id="flashcards">
+        <div class="moving-label" aria-hidden="true">
+          <div>VIRE · DESCUBRA · TESTE · VIRE · DESCUBRA · TESTE ·</div>
+          <div>VIRE · DESCUBRA · TESTE · VIRE · DESCUBRA · TESTE ·</div>
+        </div>
 
-    <section class="triad section"><div class="sectionHead"><b>06</b><div><span>TRÊS ÁREAS, UM PROJETO</span><h2>Tecnociência · Programação · Robótica</h2></div></div><div class="circles"><div>CIÊNCIA<small>define medidas</small></div><div>PROGRAMAÇÃO<small>processa dados</small></div><div>ROBÓTICA<small>aplica precisão</small></div></div></section>
+        <div class="section-head section-head-light reveal">
+          <div>
+            <p class="eyebrow">PARTE PRINCIPAL</p>
+            <h2>Flashcards em foco.</h2>
+          </div>
+          <p>Uma pergunta na frente. Uma resposta curta no verso.</p>
+        </div>
 
-    <section id="cards" class="cards section"><div class="sectionHead"><b>07</b><div><span>TESTE SEU CONHECIMENTO</span><h2>Flashcards</h2></div></div><p>Clique em um cartão ou use Enter/Espaço para virar e ver a resposta.</p><div class="cardGrid">
-      <button class="flipCard"><span class="front"><small>01 · MITO OU VERDADE</small><strong>Astigmatismo afeta apenas pessoas idosas?</strong><i>VIRAR ↗</i></span><span class="back"><small>MITO OU VERDADE</small><strong>MITO</strong><p>Pode ocorrer em qualquer idade e está ligado à curvatura irregular da córnea ou do cristalino.</p><i>VOLTAR ↙</i></span></button>
-      <button class="flipCard"><span class="front"><small>02 · CURIOSIDADE</small><strong>Astigmatismo sempre causa visão duplicada?</strong><i>VIRAR ↗</i></span><span class="back"><small>CURIOSIDADE</small><strong>NEM SEMPRE</strong><p>O mais comum é visão borrada ou distorcida; duplicação aparece apenas em alguns casos.</p><i>VOLTAR ↙</i></span></button>
-      <button class="flipCard"><span class="front"><small>03 · COMO FUNCIONA?</small><strong>Por que superfícies parecem esticadas ou borradas?</strong><i>VIRAR ↗</i></span><span class="back"><small>COMO FUNCIONA?</small><strong>CURVATURA IRREGULAR</strong><p>A córnea ou o cristalino têm curvaturas diferentes em direções distintas.</p><i>VOLTAR ↙</i></span></button>
-      <button class="flipCard"><span class="front"><small>04 · TECNOLOGIA</small><strong>Como a topografia da córnea ajuda?</strong><i>VIRAR ↗</i></span><span class="back"><small>TECNOLOGIA</small><strong>MAPEAMENTO PRECISO</strong><p>Ela cria um mapa da superfície ocular e mostra regiões com curvatura desigual.</p><i>VOLTAR ↙</i></span></button>
-      <button class="flipCard"><span class="front"><small>05 · ROBÓTICA</small><strong>Robôs podem ajudar em exames oftalmológicos?</strong><i>VIRAR ↗</i></span><span class="back"><small>ROBÓTICA</small><strong>SIM</strong><p>Sistemas robóticos podem melhorar a precisão e a repetibilidade de medições e ajustes.</p><i>VOLTAR ↙</i></span></button>
-      <button class="flipCard"><span class="front"><small>06 · FUTURO</small><strong>Cirurgia guiada por IA pode reduzir o astigmatismo?</strong><i>VIRAR ↗</i></span><span class="back"><small>FUTURO</small><strong>POTENCIALMENTE</strong><p>Tecnologias assistidas por IA ajudam a planejar e executar procedimentos com maior precisão.</p><i>VOLTAR ↙</i></span></button>
-    </div></section>
+        <div class="flash-status reveal" aria-live="polite">
+          <span id="flashCount">0 de 6 vistos</span>
+          <div class="flash-progress" aria-hidden="true"><i id="flashProgress"></i></div>
+          <button id="resetCards" type="button">Fechar todos</button>
+        </div>
 
-    <section class="sources section"><div><span>FONTES SUGERIDAS</span><h2>Continue pesquisando.</h2></div><ul><li>Organização Mundial da Saúde (OMS)</li><li>Conselho Brasileiro de Oftalmologia (CBO)</li><li>Universidades e centros de pesquisa</li></ul></section>
-  </main>
-  <footer><b>ASTIGMATISMO</b><p>Projeto escolar — material educativo. Consulte um profissional para diagnóstico.</p><span>Feito por estudantes · insira aqui a equipe</span></footer>
-  <script src="script.js"></script>
-</body>
+        <div class="flashcard-grid" id="flashcardGrid"></div>
+        <p class="cards-tip reveal">Clique ou pressione Enter para virar.</p>
+      </section>
+
+      <section class="science-section" id="entenda">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">EM 20 SEGUNDOS</p>
+            <h2>Miopia, sem excesso de texto.</h2>
+          </div>
+        </div>
+
+        <div class="facts-line reveal">
+          <article>
+            <span>01</span>
+            <h3>De longe</h3>
+            <p>A imagem tende a ficar borrada.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>No olho</h3>
+            <p>O foco se forma antes da retina.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Na correção</h3>
+            <p>A lente reposiciona o caminho da luz.</p>
+          </article>
+        </div>
+
+        <div class="camera-lab reveal">
+          <div class="camera-copy">
+            <p class="eyebrow">UMA CÂMERA BIOLÓGICA</p>
+            <h3>Clique nas partes do olho.</h3>
+            <div class="part-buttons" role="group" aria-label="Partes do olho">
+              <button class="active" type="button" data-part="cornea">Córnea</button>
+              <button type="button" data-part="cristalino">Cristalino</button>
+              <button type="button" data-part="retina">Retina</button>
+              <button type="button" data-part="cerebro">Cérebro</button>
+            </div>
+          </div>
+          <div class="part-display">
+            <span id="partNumber">01</span>
+            <p id="partText">Primeira superfície que desvia a luz ao entrar no olho.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="simulator-section" id="simulador">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">SIMULADOR</p>
+            <h2>Afaste o objeto.</h2>
+          </div>
+          <p>Mude a distância e compare as duas visões.</p>
+        </div>
+
+        <div class="simulator-shell reveal">
+          <div class="scene-wrap">
+            <div class="scene" id="scene" aria-label="Paisagem usada para simular a nitidez visual">
+              <span class="scene-sun"></span>
+              <span class="scene-cloud one"></span>
+              <span class="scene-cloud two"></span>
+              <div class="scene-city" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <strong id="sceneSign">ESCOLA</strong>
+              <span class="scene-road"></span>
+            </div>
+            <div class="clarity-line">
+              <span>Nitidez simulada</span>
+              <output id="clarityValue">100%</output>
+            </div>
+          </div>
+
+          <div class="simulator-controls">
+            <div class="mode-switch" role="group" aria-label="Tipo de visão">
+              <button class="active" type="button" data-mode="normal">Normal</button>
+              <button type="button" data-mode="myopia">Miopia</button>
+            </div>
+
+            <label for="distance">
+              Distância do objeto <output id="distanceValue">12 m</output>
+            </label>
+            <input id="distance" type="range" min="2" max="30" value="12" step="1" />
+
+            <div class="focus-meter" id="focusMeter" aria-hidden="true">
+              <span>LENTE</span><i></i><b></b><em>RETINA</em>
+            </div>
+            <p id="simulatorText" aria-live="polite">A luz chega focalizada à retina.</p>
+          </div>
+        </div>
+
+        <div class="quick-challenge reveal">
+          <div>
+            <p class="eyebrow">DESAFIO RÁPIDO</p>
+            <h3>Identifique antes que o tempo termine.</h3>
+          </div>
+          <div class="challenge-object" id="challengeObject" aria-label="Objeto do desafio">⌂</div>
+          <div class="challenge-actions">
+            <span id="challengeTime">5,0 s</span>
+            <button class="secondary-button" id="startChallenge" type="button">Iniciar</button>
+          </div>
+          <p id="challengeResult" aria-live="polite"></p>
+        </div>
+
+        <p class="disclaimer">
+          Simulação educativa: a experiência real varia entre pessoas.
+        </p>
+      </section>
+
+      <section class="solution-section" id="solucao">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">ROBÓTICA + VISÃO</p>
+            <h2>Uma lente que responde ao ajuste.</h2>
+          </div>
+          <p>Nosso conceito demonstra correção óptica com foco regulável.</p>
+        </div>
+
+        <div class="solution-stage reveal">
+          <div class="solution-flow" aria-label="Fluxo do protótipo">
+            <div><span>01</span><strong>Comando</strong></div>
+            <i aria-hidden="true"></i>
+            <div><span>02</span><strong>Controlador</strong></div>
+            <i aria-hidden="true"></i>
+            <div><span>03</span><strong>Atuador</strong></div>
+            <i aria-hidden="true"></i>
+            <div><span>04</span><strong>Lente</strong></div>
+          </div>
+
+          <div class="lens-console">
+            <div class="lens-visual" aria-hidden="true">
+              <i class="solution-ray top"></i>
+              <i class="solution-ray bottom"></i>
+              <span class="variable-lens" id="variableLens"></span>
+              <b id="demoFocus"></b>
+              <em></em>
+            </div>
+            <label for="lensPower">
+              Ajuste demonstrado <output id="lensPowerValue">−2,0 D</output>
+            </label>
+            <input id="lensPower" type="range" min="0" max="4" value="2" step="0.5" />
+            <p id="lensMessage">O foco se aproxima do plano da retina.</p>
+          </div>
+        </div>
+
+        <div class="robotics-now-future reveal">
+          <article>
+            <p class="eyebrow">AGORA</p>
+            <h3>Medição precisa</h3>
+            <p>Sensores, exames digitais e equipamentos automatizados apoiam a avaliação.</p>
+          </article>
+          <article>
+            <p class="eyebrow">POSSIBILIDADE FUTURA</p>
+            <h3>Ajuste inteligente</h3>
+            <p>Lentes adaptativas e robôs poderão contribuir para soluções personalizadas.</p>
+          </article>
+        </div>
+
+        <div class="treatment-note reveal">
+          <strong>Correção não é cura.</strong>
+          <p>
+            Óculos e lentes de contato são correções comuns. Estratégias de controle da progressão exigem avaliação profissional.
+          </p>
+        </div>
+      </section>
+
+      <section class="prototype-section" id="prototipo">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">PROTÓTIPO</p>
+            <h2>Espaço para os registros.</h2>
+          </div>
+        </div>
+        <div class="media-grid reveal" aria-label="Espaços reservados para fotos e vídeos do protótipo">
+          <div class="media-slot"><span>01</span><i aria-hidden="true">＋</i></div>
+          <div class="media-slot"><span>02</span><i aria-hidden="true">＋</i></div>
+          <div class="media-slot video"><span>03</span><i aria-hidden="true">▶</i></div>
+          <div class="media-slot video"><span>04</span><i aria-hidden="true">▶</i></div>
+        </div>
+      </section>
+
+      <section class="quiz-section" id="quiz">
+        <div class="section-head section-head-light reveal">
+          <div>
+            <p class="eyebrow">QUIZ FINAL</p>
+            <h2>O conteúdo ficou nítido?</h2>
+          </div>
+        </div>
+
+        <div class="quiz-box reveal">
+          <header>
+            <span id="quizCounter">1 / 5</span>
+            <div class="quiz-progress" aria-hidden="true"><i id="quizBar"></i></div>
+            <strong id="quizScore">0 PONTOS</strong>
+          </header>
+          <div id="quizContent"></div>
+        </div>
+      </section>
+
+      <section class="sources-section" id="fontes">
+        <p class="eyebrow">FONTES UTILIZADAS</p>
+        <div class="source-links">
+          <a href="https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/nearsightedness-myopia" target="_blank" rel="noopener noreferrer">National Eye Institute ↗</a>
+          <a href="https://www.who.int/publications-detail-redirect/world-report-on-vision" target="_blank" rel="noopener noreferrer">Organização Mundial da Saúde ↗</a>
+          <a href="https://www.cbo.com.br/" target="_blank" rel="noopener noreferrer">Conselho Brasileiro de Oftalmologia ↗</a>
+          <a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer">Ministério da Saúde ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>PROJETO ESCOLAR · MIOPIA</span>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
